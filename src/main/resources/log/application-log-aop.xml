@@ -17,14 +17,14 @@
     </bean>
 
     <!-- 定义Service异常日志 -->
-    <bean id="afterAdvice" class="com.kimi.jar.log.LogAfterInterceptor">
+    <bean id="afterAdvice" class="com.kimi.pms.log.LogAfterInterceptor">
         <!--<property name="enableErrorToLog" value="${service.errorlog.log.on}" />-->
         <!--<property name="enableErrorToDb" value="${service.errorlog.db.on}" />-->
         <!--<property name="logParamsGetter" ref="fwLogParamsGetter" />-->
     </bean>
 
     <!-- 定义Service异常日志 -->
-    <bean id="beforeAdvice" class="com.kimi.jar.log.LogBeforeInterceptor">
+    <bean id="beforeAdvice" class="com.kimi.pms.log.LogBeforeInterceptor">
         <!--<property name="enableErrorToLog" value="${service.errorlog.log.on}" />-->
         <!--<property name="enableErrorToDb" value="${service.errorlog.db.on}" />-->
         <!--<property name="logParamsGetter" ref="fwLogParamsGetter" />-->
