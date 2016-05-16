@@ -9,6 +9,7 @@
        xmlns:aop="http://www.springframework.org/schema/aop">
 
     <import resource="classpath*:/mysql/mysql-jdbc.xml"></import>
+    <import resource="classpath*:/redis/redis.xml"></import>
     <import resource="classpath*:/log/application-log-aop.xml"></import>
 
     <!-- 自动扫描kimi包 ,将带有注解的类 纳入spring容器管理 -->

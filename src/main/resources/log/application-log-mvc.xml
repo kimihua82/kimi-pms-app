@@ -12,7 +12,7 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
-            <bean class="com.kimi.jar.log.LogWebHandlerInterceptor">
+            <bean class="com.kimi.pms.log.LogWebHandlerInterceptor">
                 <!--<property name="accessLogService" ref="fwAccessLogService" />-->
                 <!--<property name="logParamsGetter" ref="fwWebLogParamsGetter" />-->
             </bean>

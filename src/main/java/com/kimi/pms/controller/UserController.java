@@ -1,5 +1,7 @@
 package com.kimi.pms.controller;
 
+import com.kimi.pms.po.UserEntity;
+import com.kimi.pms.session.SessionContext;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,12 +13,21 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class UserController  {
 
-
-
     @RequestMapping("/login")
-    public String login(){
+    public String login() {
+        UserEntity user = new UserEntity();
+        user.setUserName("Kimi");
+        user.setUserId(100L);
+        SessionContext.getSession().setAttribute("userId", user);
 
-       return "login";
+        return "login";
     }
+
+    @RequestMapping("/login1")
+    public String login1(){
+        Object obj= SessionContext.getSession().getAttribute("userId");
+        return "login";
+    }
+
 
 }
