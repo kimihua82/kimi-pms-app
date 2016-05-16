@@ -18,14 +18,16 @@ public class UserController  {
         UserEntity user = new UserEntity();
         user.setUserName("Kimi");
         user.setUserId(100L);
-        SessionContext.getSession().setAttribute("userId", user);
+        SessionContext.getSession().setAttribute("userId", 999);
+        SessionContext.getSession().setAttribute("ddd", user);
+
 
         return "login";
     }
 
     @RequestMapping("/login1")
     public String login1(){
-        Object obj= SessionContext.getSession().getAttribute("userId");
+        UserEntity obj= (UserEntity)SessionContext.getSession().getAttribute("ddd");
         return "login";
     }
 
